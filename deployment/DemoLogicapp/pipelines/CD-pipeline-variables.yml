@@ -1,0 +1,24 @@
+# CD pipeline variables
+
+variables:
+
+  # Your Azure service connection
+  serviceConnectionName: ''
+
+  # Logic App deploy environment
+  logicAppEnvironment: 'dev'
+
+  # Subscription
+  subscriptionId: 'ad85371b-2b73-434d-a3b7-c01a5d92d20a'
+
+  # Resource Group location
+  resourceGroupLocation: 'southcentralus'
+  
+  #  Logic App
+  logicAppName: 'DemoLogicapp'
+
+  #  Logic App Resource Group
+  resourceGroupName: 'DefaultResourceGroup-SCUS'
+
+  # Project artifacts
+  logicAppCIArtifactName: 'DemoLogicapp_publish_artifact_ci'

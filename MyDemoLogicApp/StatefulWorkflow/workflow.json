@@ -1,0 +1,19 @@
+{
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "actions": {},
+    "contentVersion": "1.0.0.0",
+    "outputs": {},
+    "triggers": {},
+    "metadata": {
+      "IaCMetadata": {
+        "IaCGenerationDate": "2024-11-14T08:35:56.456Z",
+        "IaCWorkflowCorrelationId": "d2c2fcc7-3d80-4464-938a-102ffb677dca",
+        "LogicAppsExtensionVersion": "4.107.3",
+        "LogicAppsPinnedBundle": false,
+        "LogicAppsCurrentBundleVersion": "1.94.13"
+      }
+    }
+  },
+  "kind": "Stateful"
+}

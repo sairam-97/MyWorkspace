@@ -1,0 +1,9 @@
+# CI pipeline variables
+
+variables:
+
+  #  Logic App
+  logicAppName: 'DemoLogicapp'
+
+  # Project artifacts
+  logicAppCIArtifactName: 'DemoLogicapp_publish_artifact_ci'

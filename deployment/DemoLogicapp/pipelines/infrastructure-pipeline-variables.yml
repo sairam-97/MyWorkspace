@@ -1,0 +1,30 @@
+# IaC variables
+
+variables:
+
+  # Your Azure service connection
+  serviceConnectionName: ''
+
+  # Logic App deploy environment
+  logicAppEnvironment: 'dev'
+
+  # Subscription
+  subscriptionId: 'ad85371b-2b73-434d-a3b7-c01a5d92d20a'
+
+  # Resource Group location
+  resourceGroupLocation: 'southcentralus'
+
+  # Resource Group Name
+  resourceGroupName: 'DefaultResourceGroup-SCUS'
+
+  # Storage account name
+  storageAccountName: 'cloudstorageaccount'
+
+  # App service plan
+  appServicePlanName: 'Appserviceplan'
+
+  #  Logic App
+  logicAppName: 'DemoLogicapp'
+
+  # Project artifacts
+  logicAppIaCArtifactName: 'DemoLogicapp_publish_artifact_iac'
