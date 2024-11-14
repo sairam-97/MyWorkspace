@@ -4,24 +4,34 @@ trigger:
 pr: none
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-18.04'
 
 variables:
-- template: CI-pipeline-variables.yml
+- template: variables/pipeline-vars.yml
 
 jobs:
 - job: logic_app_build
   displayName: 'Build and publish logic app'
   steps:
-  - task: VSBuild@1
-    displayName: 'Azure Logic Apps Standard Build'
+  - task: CopyFiles@2
+    displayName: 'Create project folder'
     inputs:
-      sourceFolder: '$(Build.SourcesDirectory)/$(logicAppName)'
-      deploymentFolder: '$(System.DefaultWorkingDirectory)/deployment/$(logicAppName)/'
+      SourceFolder: '$(System.DefaultWorkingDirectory)/azure-devops-sample/logic'
+      Contents: |
+        **
+      TargetFolder: 'project_output'
+
+  - task: ArchiveFiles@2
+    displayName: 'Create project zip'
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/project_output'
+      includeRootFolder: false
+      archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+      replaceExistingArchive: true
 
   - task: PublishPipelineArtifact@1
-    displayName: 'Publish logic app zip artifact'
+    displayName: 'Publish project zip artifact'
     inputs:
       targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       artifact: '$(logicAppCIArtifactName)'
