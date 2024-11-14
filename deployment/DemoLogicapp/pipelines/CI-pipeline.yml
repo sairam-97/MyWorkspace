@@ -6,8 +6,7 @@ pr: none
 pool:
   vmImage: 'ubuntu-18.04'
 
-variables:
-- template: ./deployment/Logicappdemo/pipelines/CI-pipeline-variables.yml
+
 
 jobs:
 - job: logic_app_build
