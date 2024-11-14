@@ -13,7 +13,7 @@ jobs:
 - job: logic_app_build
   displayName: 'Build and publish logic app'
   steps:
-  - task: AzureLogicAppsStandardBuild@0
+  - task: VSBuild@1
     displayName: 'Azure Logic Apps Standard Build'
     inputs:
       sourceFolder: '$(Build.SourcesDirectory)/$(logicAppName)'
